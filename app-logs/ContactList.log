@@ -1,0 +1,336 @@
+2021-05-29 22:40:49,996 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:40:50,011 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:40:50,011 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:40:50,168 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-05-29 22:40:50,168 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-05-29 22:40:53,121 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:40:53,170 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:40:53,185 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:40:53,185 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:40:53,357 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:40:53,357 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3189 ms
+2021-05-29 22:40:54,263 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:40:54,294 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:40:54,372 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:40:54,403 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 5.38 seconds (JVM running for 6.714)
+2021-05-29 22:40:54,403 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:40:54,419 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:40:59,340 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 22:40:59,348 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 22:40:59,353 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms
+2021-05-29 22:40:59,404 ERROR c.r.c.s.ContactListServiceImpl [http-nio-8080-exec-1] java.io.FileNotFoundException: class path resource [ContactList.json] cannot be resolved to absolute file path because it does not exist
+	at org.springframework.util.ResourceUtils.getFile(ResourceUtils.java:177)
+	at com.rs.contactlist.daoImpl.ContactListDAOImpl.getContactList(ContactListDAOImpl.java:41)
+	at com.rs.contactlist.serviceImpl.ContactListServiceImpl.getContactList(ContactListServiceImpl.java:31)
+	at com.rs.contactlist.controller.ContactListController.getRouters(ContactListController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-05-29 22:41:02,814 ERROR c.r.c.s.ContactListServiceImpl [http-nio-8080-exec-2] java.io.FileNotFoundException: class path resource [ContactList.json] cannot be resolved to absolute file path because it does not exist
+	at org.springframework.util.ResourceUtils.getFile(ResourceUtils.java:177)
+	at com.rs.contactlist.daoImpl.ContactListDAOImpl.addContact(ContactListDAOImpl.java:56)
+	at com.rs.contactlist.serviceImpl.ContactListServiceImpl.addContact(ContactListServiceImpl.java:45)
+	at com.rs.contactlist.controller.ContactListController.addContact(ContactListController.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-05-29 22:42:53,082 INFO o.s.b.a.ApplicationAvailabilityBean [Thread-6] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-05-29 22:42:53,797 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:42:53,797 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:42:53,797 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:42:54,329 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:42:54,333 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:42:54,334 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:42:54,334 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:42:54,365 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:42:54,365 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 568 ms
+2021-05-29 22:42:54,662 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:42:54,677 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:42:54,693 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:42:54,693 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 0.981 seconds (JVM running for 127.004)
+2021-05-29 22:42:54,693 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:42:54,693 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 22:42:54,709 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:43:11,237 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 22:43:11,239 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2021-05-29 22:43:11,240 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2021-05-29 22:43:11,248 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-2] file does not exist or is empty
+2021-05-29 22:43:12,402 INFO o.s.b.a.ApplicationAvailabilityBean [Thread-9] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-05-29 22:43:12,960 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:43:12,975 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:43:12,975 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:43:13,423 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:43:13,423 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:43:13,423 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:43:13,423 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:43:13,486 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:43:13,486 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 506 ms
+2021-05-29 22:43:13,853 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:43:13,853 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:43:13,869 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:43:13,869 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 0.999 seconds (JVM running for 146.182)
+2021-05-29 22:43:13,869 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:43:13,869 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 22:43:13,884 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:43:17,454 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 22:43:17,454 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 22:43:17,458 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-05-29 22:43:17,462 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] Zero records in file
+2021-05-29 22:44:18,376 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-3] Zero records in file
+2021-05-29 22:44:19,552 INFO o.s.b.a.ApplicationAvailabilityBean [Thread-14] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-05-29 22:44:20,188 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:44:20,188 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:44:20,203 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:44:20,641 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:44:20,641 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:44:20,641 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:44:20,641 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:44:20,676 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:44:20,676 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 473 ms
+2021-05-29 22:44:20,863 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:44:20,871 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:44:20,887 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:44:20,887 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 0.772 seconds (JVM running for 213.196)
+2021-05-29 22:44:20,895 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:44:20,895 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 22:44:20,895 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:44:22,161 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 22:44:22,167 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 22:44:22,168 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2021-05-29 22:45:17,765 ERROR c.r.c.s.ContactListServiceImpl [http-nio-8080-exec-3] java.io.FileNotFoundException: C:\contactList\ContactList.json (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at com.fasterxml.jackson.core.JsonFactory.createGenerator(JsonFactory.java:1340)
+	at com.fasterxml.jackson.databind.ObjectMapper.createGenerator(ObjectMapper.java:1179)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3684)
+	at com.rs.contactlist.daoImpl.ContactListDAOImpl.updateContact(ContactListDAOImpl.java:133)
+	at com.rs.contactlist.serviceImpl.ContactListServiceImpl.updateContact(ContactListServiceImpl.java:80)
+	at com.rs.contactlist.controller.ContactListController.updateContact(ContactListController.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+2021-05-29 22:45:42,958 INFO o.s.b.a.ApplicationAvailabilityBean [Thread-19] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-05-29 22:45:43,738 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:45:43,738 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:45:43,738 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:45:44,191 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:45:44,206 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:45:44,206 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:45:44,206 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:45:44,237 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:45:44,237 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 499 ms
+2021-05-29 22:45:44,362 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:45:44,378 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:45:44,393 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:45:44,393 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 0.805 seconds (JVM running for 296.71)
+2021-05-29 22:45:44,409 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:45:44,409 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 22:45:44,409 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:45:52,950 INFO o.s.b.a.ApplicationAvailabilityBean [Thread-24] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-05-29 22:45:53,454 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:45:53,454 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:45:53,454 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:45:53,798 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:45:53,798 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:45:53,798 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:45:53,803 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:45:53,843 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:45:53,843 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 389 ms
+2021-05-29 22:45:54,003 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:45:54,012 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:45:54,020 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:45:54,028 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 0.638 seconds (JVM running for 306.331)
+2021-05-29 22:45:54,028 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:45:54,028 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 22:45:54,028 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:45:57,298 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 22:45:57,303 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 22:45:57,304 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2021-05-29 22:45:57,304 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] file does not exist or is empty
+2021-05-29 22:46:30,041 INFO o.s.b.a.ApplicationAvailabilityBean [Thread-29] Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2021-05-29 22:46:30,804 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ContactListApplication using Java 11.0.10 on DESKTOP-HDPCKIH with PID 8300 (C:\rs-development\Backend\Java\contact-list-java-app\target\classes started by Ryan in C:\rs-development\Backend\Java\contact-list-java-app)
+2021-05-29 22:46:30,804 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-29 22:46:30,804 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-05-29 22:46:31,284 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2021-05-29 22:46:31,284 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:46:31,297 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-05-29 22:46:31,298 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-29 22:46:31,315 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-05-29 22:46:31,315 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 495 ms
+2021-05-29 22:46:31,456 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-05-29 22:46:31,456 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2021-05-29 22:46:31,471 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-29 22:46:31,471 INFO o.s.b.StartupInfoLogger [restartedMain] Started ContactListApplication in 0.755 seconds (JVM running for 343.779)
+2021-05-29 22:46:31,471 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state LivenessState changed to CORRECT
+2021-05-29 22:46:31,471 INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-05-29 22:46:31,471 INFO o.s.b.a.ApplicationAvailabilityBean [restartedMain] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-29 22:46:41,592 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-29 22:46:41,592 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-05-29 22:46:41,596 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2021-05-29 22:46:41,600 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] file does not exist or is empty
+2021-05-29 22:46:41,600 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] Creating File and putting Entry
+2021-05-29 22:46:45,083 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-2] Zero records in file
+2021-05-29 23:12:25,402 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-5] Zero records in file
+2021-05-29 23:13:12,775 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-6] Zero records in file
+2021-05-29 23:13:27,577 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-9] Zero records in file
+2021-05-29 23:13:28,898 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-9] zero record left in contact List file
+2021-05-29 23:14:45,501 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-7] Zero records in file
+2021-05-29 23:15:30,027 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-9] Zero records in file
+2021-05-29 23:16:19,933 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-2] Zero records in file
+2021-05-29 23:16:22,981 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-5] Zero records in file
+2021-05-29 23:16:22,986 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-5] zero record left in contact List file
+2021-05-29 23:16:53,277 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-9] Zero records in file
+2021-05-29 23:16:58,933 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] Zero records in file
+2021-05-29 23:16:58,937 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] zero record left in contact List file
+2021-05-29 23:17:52,900 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-10] Zero records in file
+2021-05-29 23:17:57,414 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-1] Zero records in file
+2021-05-29 23:18:06,787 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-5] Zero records in file
+2021-05-29 23:18:09,170 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-6] Zero records in file
+2021-05-29 23:18:11,574 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-8] Zero records in file
+2021-05-29 23:18:11,580 DEBUG c.r.c.d.ContactListDAOImpl [http-nio-8080-exec-8] zero record left in contact List file

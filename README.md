@@ -24,8 +24,7 @@
         			"firstName": "userFirstName",
         			"lastName": "userLastName",
         			"email": "user@gmail.com",
-        			"phoneNumber": "00888000000",
-        			"status": "Active"
+        			"phoneNumber": "00888000000"
     			}
     			
     3. DELETE
@@ -37,7 +36,6 @@
         			"firstName": "userFirstName",
         			"lastName": "userLastName",
         			"email": "user@gmail.com",
-        			"phoneNumber": "00888000000",
-        			"status": "Active"
+        			"phoneNumber": "00888000000"
     			}
     		

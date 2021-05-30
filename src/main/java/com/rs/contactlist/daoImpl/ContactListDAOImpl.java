@@ -61,6 +61,7 @@ public class ContactListDAOImpl implements ContactListDAO {
 			 contact = contactRequest.getContact();
 			 UUID uuid= UUID.randomUUID();
 			 contact.setId(uuid.toString());
+			 contact.setStatus("Active");
 			 contactList.add(contact);
 			 objectMapper.writeValue(fileObj, contactList);
 
@@ -70,6 +71,9 @@ public class ContactListDAOImpl implements ContactListDAO {
 		return contact;
 	}
 
+
+	// below function can actually remove the object from list
+/**
 	public Boolean deleteContact(String id) throws JsonParseException, JsonMappingException, IOException {
 		File fileObj = new File(contactListFilePath);
 		List<Contact> contactList = null;
@@ -81,6 +85,37 @@ public class ContactListDAOImpl implements ContactListDAO {
 			if (contactOpts.isPresent()) {
 				contact = contactOpts.get();
 				contactList.remove(contact);
+				objectMapper.writeValue(fileObj, contactList);
+				success = true;
+				if (0 == contactList.size()) {
+					log.debug("zero record left in contact List file");
+				}
+
+			} else {
+				log.debug("Contact does not exist");
+				success = false;
+			}
+		} else {
+			log.debug("file does not exist or is empty");
+			success = false;
+		}
+		return success;
+	}
+	**/
+	
+	public Boolean deleteContact(String id) throws JsonParseException, JsonMappingException, IOException {
+		File fileObj = new File(contactListFilePath);
+		List<Contact> contactList = null;
+			Contact contact =null;
+			Boolean success = false;
+			contactList = getContactList();
+		if (null != contactList && !contactList.isEmpty()) {
+			Optional<Contact> contactOpts = contactList.stream().filter(r -> r.getId().equals(id)).findFirst();
+			if (contactOpts.isPresent()) {
+				contact = contactOpts.get();
+				contactList.remove(contact);
+				contact.setStatus("InActive");
+				contactList.add(contact);
 				objectMapper.writeValue(fileObj, contactList);
 				success = true;
 				if (0 == contactList.size()) {
@@ -122,8 +157,7 @@ public class ContactListDAOImpl implements ContactListDAO {
 
 			        newContact.setPhoneNumber(StringUtils.isNoneBlank(contactRequest.getPhoneNumber()) ? contactRequest.getPhoneNumber()
 			                : oldContact.getPhoneNumber());
-			        newContact.setStatus(StringUtils.isNoneBlank(contactRequest.getStatus()) ? contactRequest.getStatus()
-			                : oldContact.getStatus());
+			        newContact.setStatus(oldContact.getStatus());
 			        
 			        contactList.add(newContact);
 					objectMapper.writeValue(fileObj, contactList);

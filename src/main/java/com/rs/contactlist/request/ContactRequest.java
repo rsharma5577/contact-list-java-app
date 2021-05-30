@@ -15,7 +15,6 @@ public class ContactRequest {
 	private String lastName;
 	private String email;
 	private String phoneNumber;
-	private String status;
 
 	@JsonIgnore
 	public Contact getContact() {
@@ -25,7 +24,6 @@ public class ContactRequest {
 		contact.setFirstName(firstName);
 		contact.setLastName(lastName);
 		contact.setPhoneNumber(phoneNumber);
-		contact.setStatus(status);
 		return contact;
 	}
 	
